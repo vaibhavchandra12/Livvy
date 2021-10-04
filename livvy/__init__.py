@@ -1,5 +1,6 @@
 from pyrogram import filters , Client
 import os 
+from aiohttp import ClientSession
 from config import API_ID, API_HASH, BOT_TOKEN
 livvycmd = Client(
     'bot',
@@ -15,6 +16,8 @@ from config import MONGO_URL
 
 mongo_client = MongoClient(MONGO_URL)
 db = mongo_client.livvy
+
+aiohttpsession = ClientSession()
 
 
 help_message = []
