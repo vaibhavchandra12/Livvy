@@ -1,8 +1,8 @@
-from nksama.db import database as db
-from nksama import bot
+from livvy.db import database as db
+from livvy import bot
 from pyrogram import filters
 import json
-from nksama import help_message
+from livvy import help_message
 
 @bot.on_message(filters.command('save'))
 def addnote(_,message):
