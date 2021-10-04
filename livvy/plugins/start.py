@@ -34,10 +34,9 @@ async def _human_time_duration(seconds):
 @livvycmd.on_message(filters.command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_,message):
     chat_type = message.chat.type
-    if chat_type == "private":
-        current_time = datetime.utcnow()
-        uptime_sec = (current_time - START_TIME).total_seconds()
-        uptime = await _human_time_duration(int(uptime_sec))
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
     
     await message.reply_photo(
         photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
@@ -50,8 +49,3 @@ Build With Python and Pyrogram.
             [InlineKeyboardButton('Add Me Now' , url="https://t.me/MissLivvyBot?groupstart=true")],
             [InlineKeyboardButton('Need Help?' , callback_data="help")]
         ]))
-    elif chat_type in ["group", "supergroup"]:
-        await message.reply_photo(
-            photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
-            caption=f"""Thanks For Adding Me.
-I am an Advanced Group Manager Bot, With Lots of Cool Features❤️.
