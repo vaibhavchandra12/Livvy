@@ -3,21 +3,10 @@ from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import Message
 from livvy import bot
-from livvy.plugins.helpers import call_back_in_filter 
 
 from pyrogram import filters
+from pyrogram import call_back_in_filter
 from livvy import help_message
-
-import asyncio
-from typing import ClassVar, Optional
-
-from pyrogram.errors import (
-    ChatAdminRequired,
-    FloodWait,
-    UserAdminInvalid,
-    UserIdInvalid,
-)
-from pyrogram.types import Chat, User
 
 
 def is_admin(group_id: int, user_id: int):
@@ -33,11 +22,7 @@ def is_admin(group_id: int, user_id: int):
         # print('Not admin')
         return False
 
-        from pyrogram import filters 
 
-class Admins(plugin.Plugin):
-    name: ClassVar[str] = "Admins"
-    helpable: ClassVar[bool] = True
 
         
 @bot.on_callback_query(call_back_in_filter("admin"))
@@ -101,26 +86,6 @@ def pin(_,message):
     else:
         message.reply('Reply to a message')
         
-@bot.on_message(filters.command('zombies') & filters.command(f'zombies@DMissLivvyBotBot'))
-async def pin(_,message):
-        chat = ctx.msg.chat
-        zombie = 0
-
-        await ctx.respond(await message.reply("Finding zombies account..."))
-        async for member in self.bot.client.iter_chat_members(chat.id):  # type: ignore
-            if member.user.is_deleted:
-                zombie += 1
-                try:
-                    await self.bot.client.kick_chat_member(chat.id, member.user.id)
-                except UserAdminInvalid:
-                    zombie -= 1
-                except FloodWait as flood:
-                    await asyncio.sleep(flood.x)  # type: ignore
-
-        if zombie == 0:
-            return await message.reply("Zombies not found, group is clean..`")
-
-        return await message.reply("**{}** `zombies found and has been removed..!` 🚮", zombie)
 
 help_message.append({
     "Module_Name": "Admin" ,
