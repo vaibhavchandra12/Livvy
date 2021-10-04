@@ -18,6 +18,18 @@ TIME_DURATION_UNITS = (
     ('sec', 1)
 )
 
+async def _human_time_duration(seconds):
+    if seconds == 0:
+        return 'inf'
+    parts = []
+    for unit, div in TIME_DURATION_UNITS:
+        amount, seconds = divmod(int(seconds), div)
+        if amount > 0:
+            parts.append('{} {}{}'
+                         .format(amount, unit, "" if amount == 1 else "s"))
+    return ', '.join(parts)
+
+
 
 @bot.on_message(filters.command('start'))
 async def start(_,message):
