@@ -1,3 +1,8 @@
 pyrogram
 tgcrypto
 requests
+bs4
+aiohttp
+aiofiles
+asyncio
+python-dotenv
