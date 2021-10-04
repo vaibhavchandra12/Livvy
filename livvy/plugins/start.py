@@ -15,7 +15,7 @@ async def start(_,message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/9a50a0dbbac3e68f0cb3d.mp4",
         caption=f"""Hey🤞, I am {BOT_NAME}.
-I am an Advanced Group Manager Bot, With Lots of Cool Featues❤️.
+I am an Advanced Group Manager Bot, With Lots of Cool Features❤️.
 
 Build With Python and Pyrogram.
 **Uptime** : `{uptime}` """, reply_markup=InlineKeyboardMarkup([ 
