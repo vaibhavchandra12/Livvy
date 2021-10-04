@@ -1,5 +1,5 @@
 from os import name
-from pyrogram import messages
+from pyrogram.types import messages
 from livvy import bot , help_message
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
