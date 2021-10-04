@@ -1,5 +1,4 @@
-from livvy import bot
-
+from livvy import livvy
 
 if __name__ == "__main__":
-    bot.run()
+    livvy.run()
