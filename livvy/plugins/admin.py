@@ -33,11 +33,11 @@ def admeme_callback(_,query):
     if is_admin(query.message.chat.id , query.from_user.id) and query.data.split(":")[1] == "unban":
         bot.unban_chat_member(query.message.chat.id , scammer)
         query.answer('Unbanned!')
-        query.message.edit(f'unbanned [{scammer}](tg://user?id={scammer})' , parse_mode='markdown')
+        query.message.edit(f'Unbanned [{scammer}](tg://user?id={scammer})' , parse_mode='markdown')
     else:
         message.reply('You are not admin!')
 
-@bot.on_message(filters.command('ban') & filters.command(f'ban@Dynasty_MangerBot'))
+@bot.on_message(filters.command('ban') & filters.command(f'ban@MissLivvyBot'))
 def ban(_,message):
     # scammer = reply.from_user.id
     reply = message.reply_to_message
@@ -46,13 +46,13 @@ def ban(_,message):
         bot.send_message(message.chat.id ,f"Banned! {reply.from_user.username}" , parse_mode="markdown" ,reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Unban" , callback_data=f"admin:unban:{message.reply_to_message.from_user.id}")],
         ]))
-    elif reply.from_user.id == 825664681:
+    elif reply.from_user.id == 1971361970:
         message.reply('This Person is my owner!')
     else:
         message.reply('You are not admin')
 
 
-@bot.on_message(filters.command('unban') & filters.command(f'unban@Dynasty_MangerBot'))
+@bot.on_message(filters.command('unban') & filters.command(f'unban@MissLivvyBot'))
 def unban(_,message):
     try:
         user = message.text.split(" ")[1]
@@ -63,7 +63,7 @@ def unban(_,message):
         message.reply(e)
 
     
-@bot.on_message(filters.command('pin') & filters.command(f'pin@Dynasty_MangerBot'))
+@bot.on_message(filters.command('pin') & filters.command(f'pin@MissLivvyBotBot'))
 def pin(_,message):
     if message.reply_to_message:
         message_id = message.reply_to_message.message_id
@@ -76,7 +76,7 @@ def pin(_,message):
         message.reply('Reply to a message')
 
 
-@bot.on_message(filters.command('unpin') & filters.command(f'unpin@Dynasty_MangerBot'))
+@bot.on_message(filters.command('unpin') & filters.command(f'unpin@DMissLivvyBotBot'))
 def pin(_,message):
     if message.reply_to_message:
         message_id = message.reply_to_message.message_id
