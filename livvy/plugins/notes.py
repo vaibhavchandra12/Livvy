@@ -1,10 +1,10 @@
 from livvy.db import database as db
-from livvy import bot
+from livvy import ;ivvycmd
 from pyrogram import filters
 import json
 from livvy import help_message
 
-@bot.on_message(filters.command('save'))
+@livvycmd.on_message(filters.command('save'))
 def addnote(_,message):
     note = message.text.split(' ')[1]
     text = message.text.replace(message.text.split(" ")[0] , "").replace(message.text.split(' ')[1] , "")
@@ -20,7 +20,7 @@ def addnote(_,message):
     message.reply_text('Added!')
 
 
-@bot.on_message(filters.command('getnote'))
+@livvycmd.on_message(filters.command('getnote'))
 def get_note(_,message):
     try:
         note = message.text.split(' ')[1]
@@ -30,7 +30,7 @@ def get_note(_,message):
         message.reply(e)
 
 
-@bot.on_message(filters.command('notes'))
+@livvycmd.on_message(filters.command('notes'))
 def notes(_,message):
     notes = None
 
@@ -53,7 +53,7 @@ def notes(_,message):
 
     
 
-@bot.on_message(filters.command('delnote'))
+@livvycmd.on_message(filters.command('delnote'))
 def delnote(_,message):
     note = message.text.split(" ")[1]
     db.delete_one({"note_name": note})
