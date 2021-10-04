@@ -1,4 +1,4 @@
-from livvy import livvy
+from livvy import livvycmd
 
 if __name__ == "__main__":
-    livvy.run()
+    livvycmd.run()
