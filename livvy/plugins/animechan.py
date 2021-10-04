@@ -1,8 +1,8 @@
 import requests
 from livvy import bot
 from pyrogram import filters
-from pyrogram import InlineKeyboardButton
-from pyrogram import InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
 from livvy.plugins.helpers import call_back_in_filter
 
 
