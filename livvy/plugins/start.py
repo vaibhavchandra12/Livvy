@@ -35,9 +35,9 @@ async def _human_time_duration(seconds):
 async def start(_,message):
     chat_type = message.chat.type
     if chat_type == "private":
-    current_time = datetime.utcnow()
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
+        current_time = datetime.utcnow()
+        uptime_sec = (current_time - START_TIME).total_seconds()
+        uptime = await _human_time_duration(int(uptime_sec))
     
     await message.reply_photo(
         photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
