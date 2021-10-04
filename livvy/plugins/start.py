@@ -5,7 +5,7 @@ from pyrogram import filters
 from livvy import help_message
 from time import time
 from datetime import datetime
-
+from config.py import BOT_NAME
 
 @bot.on_message(filters.command('start'))
 async def start(_,message):
