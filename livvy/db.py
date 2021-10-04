@@ -2,5 +2,5 @@ import pymongo
 
 from config import MONGO_URL
 
-
-database = pymongo.MongoClient(MONGO_URL)['notes']['notes']
+mongo_client = MongoClient(MONGO_URL)
+db = mongo_client.wbb
