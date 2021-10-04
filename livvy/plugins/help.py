@@ -13,4 +13,4 @@ def bothelp(_,message):
         keyboard.append([InlineKeyboardButton(f"{x['Module_Name']}" , callback_data=f"help:{x['Module_Name']}")])
         
 
-    bot.send_message(message.chat.id , "Help And CMDs" , reply_markup=InlineKeyboardMarkup(keyboard))
+    bot.send_message(message.chat.id , "Commands and help" , reply_markup=InlineKeyboardMarkup(keyboard))
