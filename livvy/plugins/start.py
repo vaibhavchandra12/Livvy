@@ -50,8 +50,8 @@ Build With Python and Pyrogram.
             [InlineKeyboardButton('Add Me Now' , url="https://t.me/MissLivvyBot?groupstart=true")],
             [InlineKeyboardButton('Need Help?' , callback_data="help")]
         ]))
-        elif chat_type in ["group", "supergroup"]:
-                await message.reply_photo(
-        photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
-        caption=f"""Thanks For Adding Me.
+    elif chat_type in ["group", "supergroup"]:
+        await message.reply_photo(
+            photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
+            caption=f"""Thanks For Adding Me.
 I am an Advanced Group Manager Bot, With Lots of Cool Features❤️.
