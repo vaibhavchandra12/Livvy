@@ -18,6 +18,6 @@ def start(_,message):
 I am an Advanced Group Manager Bot, With Lots of Cool Featues❤️.
 
 Build With Python and Pyrogram.
-**Uptime** : `{uptime}` """,
-        [InlineKeyboardButton('Need Help?' , callback_data="help")]
+**Uptime** : `{uptime}` """, reply_markup=InlineKeyboardMarkup([ 
+        [InlineKeyboardButton('help' , callback_data="help")]
     ]))
