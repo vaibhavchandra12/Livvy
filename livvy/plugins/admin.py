@@ -9,7 +9,7 @@ from pyrogram import filters
 import asyncio
 from pyrogram.types import CallbackQuery, ChatPermissions, Message
 
-from livvy import BOT_ID, SUDO
+from config import BOT_ID, SUDO
 from livvy.core.decorators.errors import capture_err
 from livvy.utils.keyboard import ikb
 from livvy.core.dbfunctions import (add_warn, get_warn, int_to_alpha,
