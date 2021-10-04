@@ -1,9 +1,9 @@
 import requests
-from nksama import bot
+from livvy import bot
 from pyrogram import filters
-from pyrogram.types.bots_and_keyboards.inline_keyboard_button import InlineKeyboardButton
-from pyrogram.types.bots_and_keyboards.inline_keyboard_markup import InlineKeyboardMarkup
-from nksama.plugins.helpers import call_back_in_filter
+from pyrogram import InlineKeyboardButton
+from pyrogram import InlineKeyboardMarkup
+from livvy.plugins.helpers import call_back_in_filter
 
 
 @bot.on_callback_query(call_back_in_filter('quotek'))
