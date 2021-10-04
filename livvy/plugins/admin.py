@@ -1,7 +1,7 @@
 from re import escape
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
-from pyrogram import message
+from pyrogram.types import message
 from nksama import bot
 from livvy.plugins.helpers import call_back_in_filter 
 
