@@ -2,7 +2,7 @@ from os import name
 from pyrogram import messages
 from livvy import bot , help_message
 from pyrogram import filters
-from pyrogram import InlineKeyboardButton , InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
 
 def call_back_in_filter(data):
     return filters.create(
