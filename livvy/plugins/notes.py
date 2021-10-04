@@ -1,5 +1,5 @@
 from livvy.db import database as db
-from livvy import ;ivvycmd
+from livvy import livvycmd
 from pyrogram import filters
 import json
 from livvy import help_message
