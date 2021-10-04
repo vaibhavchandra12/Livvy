@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
-from livvy import bot
+from livvy import livvycmd
 from pyrogram import filters 
 from livvy import help_message
 from time import time
@@ -31,7 +31,7 @@ async def _human_time_duration(seconds):
 
 
 
-@bot.on_message(filters.command('start'))
+@livvycmd.on_message(filters.command('start'))
 async def start(_,message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
