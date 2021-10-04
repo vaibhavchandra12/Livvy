@@ -37,7 +37,7 @@ async def start(_,message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/9a50a0dbbac3e68f0cb3d.mp4",
+        photo=f"https://telegra.ph/file/53115c567caf7350794dc.jpg",
         caption=f"""Hey🤞, I am {BOT_NAME}.
 I am an Advanced Group Manager Bot, With Lots of Cool Features❤️.
 
