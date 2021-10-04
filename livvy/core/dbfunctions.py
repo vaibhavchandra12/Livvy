@@ -2,7 +2,7 @@ import codecs
 import pickle
 from typing import Dict, List, Union
 
-from livvy.db import db
+from livvy import db
 
 notesdb = db.notes
 filtersdb = db.filters
