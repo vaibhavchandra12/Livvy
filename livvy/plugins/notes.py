@@ -65,3 +65,4 @@ help_message.append({
     "Module_Name": "Notes",
     "Notes_Help": "/addnote note name text - to add a note\n/delnote NoteName - to delete a note\ngetnote NoteName - get a note\n/notes - to get a list of notes in your chats"
 })
+
