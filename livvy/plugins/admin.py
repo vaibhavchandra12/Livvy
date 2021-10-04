@@ -2,7 +2,7 @@ from re import escape
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import Message
-from livvy import bot
+from livvy import livvycmd
 
 from pyrogram import filters
 
