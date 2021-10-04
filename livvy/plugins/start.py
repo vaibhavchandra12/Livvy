@@ -7,6 +7,18 @@ from time import time
 from datetime import datetime
 from config.py import BOT_NAME
 
+
+START_TIME = datetime.utcnow()
+START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
+TIME_DURATION_UNITS = (
+    ('week', 60 * 60 * 24 * 7),
+    ('day', 60 * 60 * 24),
+    ('hour', 60 * 60),
+    ('min', 60),
+    ('sec', 1)
+)
+
+
 @bot.on_message(filters.command('start'))
 async def start(_,message):
     current_time = datetime.utcnow()
