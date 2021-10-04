@@ -62,7 +62,7 @@ def callback_help(_,query):
         for x in help_message:
             keyboard.append([InlineKeyboardButton(x['Module_Name'], callback_data=f"help:{x['Module_Name']}")])
 
-        query.message.edit("Commands and Help" , reply_markup=InlineKeyboardMarkup(keyboard))
+        query.message.edit("Help And CMDs" , reply_markup=InlineKeyboardMarkup(keyboard))
             
 
 
